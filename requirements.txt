@@ -5,3 +5,6 @@ seaborn
 scikit-learn
 streamlit>=1.50
 joblib
+fastapi
+uvicorn[standard]
+python-multipart

@@ -57,13 +57,36 @@ pip install -r requirements.txt
 ```
 
 ## 10. Execution
+
+### Option A: Complete Full-Stack Web Platform (React + FastAPI + ML)
+Start both servers with one command:
+```cmd
+start.bat
 ```
-python train_model.py
-python eda.py
-python predict.py
-streamlit run app.py
+Or in PowerShell:
+```powershell
+.\start.ps1
 ```
-`train_model.py` and `eda.py` regenerate all models/plots in `models/` and `reports/`. The app opens at http://localhost:8501.
+Or start manually in separate terminals:
+1. **FastAPI ML Backend & Orders API:**
+   ```powershell
+   venv\Scripts\uvicorn.exe api:app --reload --port 8000
+   ```
+   Interactive Swagger docs: http://localhost:8000/docs
+2. **React + Vite Frontend:**
+   ```powershell
+   cd frontend
+   npm run dev
+   ```
+   Web App: http://localhost:5173
+
+### Option B: Streamlit ML Analytics Studio (Original)
+```powershell
+venv\Scripts\streamlit.exe run app.py
+```
+Opens at http://localhost:8501.
+
+`train_model.py` and `eda.py` regenerate all models/plots in `models/` and `reports/`.
 
 ## 11. Limitations
 - The dataset appears partly synthetic: some effects are unusual (e.g. "Semi-Urban" averages 49.7 min; "Urban" is fastest), so predictions can be non-intuitive and should not be treated as real-world guarantees.

@@ -22,3 +22,6 @@ Thumbs.db
 # Temporary files
 *.log
 .pytest_cache/
+
+# Local database
+*.db
