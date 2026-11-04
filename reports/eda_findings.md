@@ -1,0 +1,8 @@
+- Delivery time: mean 26.3 min, median 26, range 10-54 min (right-skewed, no extreme outliers).
+- Traffic (mean min): {'High': 27.2, 'Jam': 31.2, 'Low': 21.3, 'Medium': 26.7}
+- Weather (mean min): {'Cloudy': 28.9, 'Fog': 29.0, 'Sandstorms': 25.9, 'Stormy': 25.9, 'Sunny': 21.9, 'Windy': 26.1}
+- Distance correlation with time: 0.32; strongest numeric correlations: {'multiple_deliveries': 0.39, 'Delivery_person_Ratings': -0.34, 'distance_km': 0.32, 'Delivery_person_Age': 0.3}
+- Multiple deliveries (mean min): {0.0: 22.9, 1.0: 26.9, 2.0: 40.5, 3.0: 47.9}
+- Vehicle (mean min): {'bicycle': 26.4, 'electric_scooter': 24.5, 'motorcycle': 27.6, 'scooter': 24.5}
+- City type (mean min): {'Metropolitian': 27.3, 'Semi-Urban': 49.7, 'Urban': 23.0}
+- Festival (mean min): {'No': 26.0, 'Yes': 45.5}

@@ -1,0 +1,13 @@
+,importance
+Delivery_person_Ratings,0.21371521462871038
+multiple_deliveries,0.12879852394565686
+distance_km,0.11544476906746545
+Road_traffic_density_Low,0.11054033398766322
+Delivery_person_Age,0.09913598332541534
+Weather_conditions_Sunny,0.07591362780121785
+Vehicle_condition,0.07534892403332057
+Weather_conditions_Fog,0.05135625139081637
+Weather_conditions_Cloudy,0.04623467242293161
+Road_traffic_density_Medium,0.018167933808497076
+pickup_hour,0.009403174552899853
+day_of_week,0.009291104456324672
