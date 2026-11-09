@@ -8,3 +8,4 @@ joblib
 fastapi
 uvicorn[standard]
 python-multipart
+psycopg2-binary>=2.9.9

@@ -88,7 +88,34 @@ Opens at http://localhost:8501.
 
 `train_model.py` and `eda.py` regenerate all models/plots in `models/` and `reports/`.
 
-## 11. Limitations
+## 11. Cloud Deployment (100% Free Architecture)
+
+DeliverIQ utilizes a decoupled architecture designed to keep hosting completely **free** without performance penalties or truncated models:
+
+| Component | Platform | Plan | Purpose |
+|---|---|---|---|
+| **Frontend UI** | **Vercel** | Free Hobby | React 19 + Vite SPA, edge CDN distribution |
+| **Backend & ML** | **Hugging Face Spaces** or **Render** | 100% Free Tier | FastAPI, Random Forest inference (48.6 MB model), SQLite orders |
+
+### 1. Deploy Frontend on Vercel
+1. Import repository `https://github.com/arpitaghetiya/DeliverIQ` into Vercel.
+2. Set **Root Directory** to `frontend`.
+3. Set **Framework Preset** to `Vite`.
+4. Add Environment Variable:
+   - `VITE_API_URL`: Your deployed FastAPI backend URL (e.g. `https://<your-backend>.hf.space` or `https://<your-backend>.onrender.com`).
+5. Deploy.
+
+### 2. Deploy Backend & ML Model
+- **Hugging Face Spaces (Recommended for ML):**
+  1. Create a new Space on Hugging Face (SDK: **Docker**, Free Tier: **2 vCPU, 16 GB RAM**).
+  2. Push the backend code (`api.py`, `predict.py`, `data_preprocessing.py`, `models/`, `Dockerfile`, `requirements-prod.txt`).
+  3. The API will automatically launch on public HTTPS: `https://<username>-deliveriq-api.hf.space`.
+- **Render.com Web Service:**
+  1. Connect GitHub repository and select **Web Service** (Free tier).
+  2. Set Build Command: `pip install -r requirements-prod.txt`.
+  3. Set Start Command: `uvicorn api:app --host 0.0.0.0 --port $PORT`.
+
+## 12. Limitations
 - The dataset appears partly synthetic: some effects are unusual (e.g. "Semi-Urban" averages 49.7 min; "Urban" is fastest), so predictions can be non-intuitive and should not be treated as real-world guarantees.
 - Prep time and pickup hour are missing for some orders (imputed).
 - Only default parameters were used; no hyperparameter tuning or cross-validation.
