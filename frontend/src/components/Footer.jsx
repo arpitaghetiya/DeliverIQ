@@ -27,8 +27,8 @@ export default function Footer() {
           <h4>Tech Stack</h4>
           <span>React + Vite</span>
           <span>FastAPI (Python)</span>
-          <span>Random Forest (sklearn)</span>
-          <span>SQLite</span>
+          <span>Random Forest (scikit-learn)</span>
+          <span>Neon PostgreSQL</span>
         </div>
       </div>
       <div className="footer-bottom">
